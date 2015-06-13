@@ -4,3 +4,11 @@ C:\Users\Wolfer\Documents\Token-Based-Authentication\AngularJSAuthentication\Ang
 C:\Users\Wolfer\Documents\Token-Based-Authentication\AngularJSAuthentication\AngularJSAuthentication.Web\obj\Debug\AngularJSAuthentication.Web.csprojResolveAssemblyReference.cache
 C:\Users\Wolfer\Documents\Token-Based-Authentication\AngularJSAuthentication\AngularJSAuthentication.Web\obj\Debug\AngularJSAuthentication.Web.dll
 C:\Users\Wolfer\Documents\Token-Based-Authentication\AngularJSAuthentication\AngularJSAuthentication.Web\obj\Debug\AngularJSAuthentication.Web.pdb
+C:\Users\Wolfer\Documents\Token-Based-Authentication\AngularJSAuthentication\AngularJSAuthentication.Web\bin\Newtonsoft.Json.dll
+C:\Users\Wolfer\Documents\Token-Based-Authentication\AngularJSAuthentication\AngularJSAuthentication.Web\bin\System.Net.Http.Formatting.dll
+C:\Users\Wolfer\Documents\Token-Based-Authentication\AngularJSAuthentication\AngularJSAuthentication.Web\bin\System.Web.Http.dll
+C:\Users\Wolfer\Documents\Token-Based-Authentication\AngularJSAuthentication\AngularJSAuthentication.Web\bin\System.Web.Http.WebHost.dll
+C:\Users\Wolfer\Documents\Token-Based-Authentication\AngularJSAuthentication\AngularJSAuthentication.Web\bin\Newtonsoft.Json.xml
+C:\Users\Wolfer\Documents\Token-Based-Authentication\AngularJSAuthentication\AngularJSAuthentication.Web\bin\System.Net.Http.Formatting.xml
+C:\Users\Wolfer\Documents\Token-Based-Authentication\AngularJSAuthentication\AngularJSAuthentication.Web\bin\System.Web.Http.xml
+C:\Users\Wolfer\Documents\Token-Based-Authentication\AngularJSAuthentication\AngularJSAuthentication.Web\bin\System.Web.Http.WebHost.xml
