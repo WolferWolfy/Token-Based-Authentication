@@ -74,6 +74,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\controllers\ordersController.js" />
+    <Content Include="app\controllers\refreshController.js" />
+    <Content Include="app\controllers\tokensManagerController.js" />
+    <Content Include="app\services\tokensManagerService.js" />
+    <Content Include="app\views\refresh.html" />
+    <Content Include="app\views\tokens.html" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

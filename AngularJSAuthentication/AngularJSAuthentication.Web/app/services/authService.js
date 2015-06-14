@@ -84,7 +84,7 @@ app.factory('authService', ['$http', '$q', 'localStorageService', function ($htt
 
             if (authData.useRefreshTokens) {
 
-                var data = "grant_type=refresh_token&refresh_token=" + authData.refreshToken + "&client_id=" + ngAuthSettings.clientId;
+                var data = "grant_type=refresh_token&refresh_token=" + authData.refreshToken + "&client_id=" + "ngAuthApp";
 
                 localStorageService.remove('authorizationData');
 
