@@ -8,28 +8,58 @@
 
 import UIKit
 
-class TokensViewController: UIViewController {
-
+class TokensViewController: UIViewController, AuthTokenRefreshDelegate {
+    
+    let authManager = AuthManager()
+    let userManager = UserDataManager.sharedInstance
+    
+    
+    @IBOutlet weak var refreshTokenView: UIView!
+    
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var refreshTokenValue: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        loadingIndicator.stopAnimating()
+        loadingIndicator.hidden = true
+        
+        refreshTokenView.hidden = true
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    @IBAction func RefreshTokenPressed(sender: AnyObject) {
+        authManager.authTokenRefreshDelegate = self
+        loadingIndicator.startAnimating()
+        loadingIndicator.hidden = false
+        
+        if let refreshToken = userManager.getUserData().refresh_token {
+            authManager.tokenRefresh(refreshToken)
+        }
+    }
+
+    @IBAction func ViewOrdersPressed(sender: AnyObject) {
+        tabBarController?.selectedIndex = 4
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func tokenRefreshFinished(response: String?) {
+        loadingIndicator.stopAnimating()
+        loadingIndicator.hidden = true
+        if let responseString = response{
+            var result = StringParser.stringToDictionary(response!)
+            
+            userManager.saveUserData(result["client_id"], accessToken: result["access_token"], refreshToken: result["refresh_token"], userName: result["userName"])
+            
+            refreshTokenValue.text = result["access_token"]
+            
+            refreshTokenView.hidden = false
+            
+        }
     }
-    */
-
 }

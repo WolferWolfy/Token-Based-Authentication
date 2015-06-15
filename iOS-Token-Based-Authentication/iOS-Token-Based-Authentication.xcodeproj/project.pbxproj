@@ -10,10 +10,11 @@
 		0B08190E1B28208500688B35 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08190D1B28208500688B35 /* OrdersViewController.swift */; };
 		0B0819101B28213800688B35 /* OrderItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08190F1B28213800688B35 /* OrderItemTableViewCell.swift */; };
 		0B0819131B283FDA00688B35 /* LogInOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0819121B283FDA00688B35 /* LogInOutViewController.swift */; };
-		0B0819151B283FF800688B35 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0819141B283FF800688B35 /* LoginViewController.swift */; };
-		0B0819171B28400300688B35 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0819161B28400300688B35 /* LogoutViewController.swift */; };
 		0B08191A1B28401F00688B35 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0819191B28401F00688B35 /* SignUpViewController.swift */; };
 		0B08191C1B28403D00688B35 /* TokensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08191B1B28403D00688B35 /* TokensViewController.swift */; };
+		0B08191F1B2970E700688B35 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B08191E1B2970E700688B35 /* AuthManager.swift */; };
+		0B0819211B29BFD000688B35 /* StringParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0819201B29BFD000688B35 /* StringParser.swift */; };
+		0B0819241B2ABEE600688B35 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0819231B2ABEE600688B35 /* UserDataManager.swift */; };
 		0B209CFC1B26DFE10002BA6F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B209CFB1B26DFE10002BA6F /* HomeViewController.swift */; };
 		0BC09ABD1B2597BF00DC7765 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC09ABC1B2597BF00DC7765 /* AppDelegate.swift */; };
 		0BC09ABF1B2597BF00DC7765 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC09ABE1B2597BF00DC7765 /* ViewController.swift */; };
@@ -40,10 +41,11 @@
 		0B08190D1B28208500688B35 /* OrdersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrdersViewController.swift; path = Orders/OrdersViewController.swift; sourceTree = "<group>"; };
 		0B08190F1B28213800688B35 /* OrderItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderItemTableViewCell.swift; path = Orders/OrderItemTableViewCell.swift; sourceTree = "<group>"; };
 		0B0819121B283FDA00688B35 /* LogInOutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInOutViewController.swift; path = LogInOut/LogInOutViewController.swift; sourceTree = "<group>"; };
-		0B0819141B283FF800688B35 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = LogInOut/LoginViewController.swift; sourceTree = "<group>"; };
-		0B0819161B28400300688B35 /* LogoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogoutViewController.swift; path = LogInOut/LogoutViewController.swift; sourceTree = "<group>"; };
 		0B0819191B28401F00688B35 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = SignUp/SignUpViewController.swift; sourceTree = "<group>"; };
 		0B08191B1B28403D00688B35 /* TokensViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TokensViewController.swift; path = Tokens/TokensViewController.swift; sourceTree = "<group>"; };
+		0B08191E1B2970E700688B35 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthManager.swift; path = Authentication/AuthManager.swift; sourceTree = "<group>"; };
+		0B0819201B29BFD000688B35 /* StringParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringParser.swift; path = Authentication/StringParser.swift; sourceTree = "<group>"; };
+		0B0819231B2ABEE600688B35 /* UserDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDataManager.swift; path = Persistence/UserDataManager.swift; sourceTree = "<group>"; };
 		0B209CFB1B26DFE10002BA6F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Home/HomeViewController.swift; sourceTree = "<group>"; };
 		0BC09AB71B2597BF00DC7765 /* iOS-Token-Based-Authentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Token-Based-Authentication.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BC09ABB1B2597BF00DC7765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,8 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				0B0819121B283FDA00688B35 /* LogInOutViewController.swift */,
-				0B0819141B283FF800688B35 /* LoginViewController.swift */,
-				0B0819161B28400300688B35 /* LogoutViewController.swift */,
 			);
 			name = LogInOut;
 			sourceTree = "<group>";
@@ -105,12 +105,37 @@
 			name = SignUp;
 			sourceTree = "<group>";
 		};
+		0B08191D1B2970B900688B35 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				0B08191E1B2970E700688B35 /* AuthManager.swift */,
+				0B0819201B29BFD000688B35 /* StringParser.swift */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		0B0819221B2ABEBE00688B35 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				0B0819231B2ABEE600688B35 /* UserDataManager.swift */,
+			);
+			name = Persistence;
+			sourceTree = "<group>";
+		};
 		0B209CFA1B26DFC50002BA6F /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				0B209CFB1B26DFE10002BA6F /* HomeViewController.swift */,
 			);
 			name = Home;
+			sourceTree = "<group>";
+		};
+		0B2105051B2EB94400D9847E /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				0B08191B1B28403D00688B35 /* TokensViewController.swift */,
+			);
+			name = Tokens;
 			sourceTree = "<group>";
 		};
 		0BC09AAE1B2597BF00DC7765 = {
@@ -134,9 +159,12 @@
 		0BC09AB91B2597BF00DC7765 /* iOS-Token-Based-Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				0B0819221B2ABEBE00688B35 /* Persistence */,
+				0B08191D1B2970B900688B35 /* Authentication */,
 				0B0819181B28400E00688B35 /* SignUp */,
 				0B0819111B283FAA00688B35 /* LogInOut */,
 				0B08190C1B28206500688B35 /* Orders */,
+				0B2105051B2EB94400D9847E /* Tokens */,
 				0B209CFA1B26DFC50002BA6F /* Home */,
 				0BC09AE11B25C5A300DC7765 /* MenuTabBar */,
 				0BC09ADC1B25A97000DC7765 /* MenuBar */,
@@ -146,7 +174,6 @@
 				0BC09AC31B2597BF00DC7765 /* Images.xcassets */,
 				0BC09AC51B2597BF00DC7765 /* LaunchScreen.xib */,
 				0BC09ABA1B2597BF00DC7765 /* Supporting Files */,
-				0B08191B1B28403D00688B35 /* TokensViewController.swift */,
 			);
 			path = "iOS-Token-Based-Authentication";
 			sourceTree = "<group>";
@@ -295,8 +322,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B0819241B2ABEE600688B35 /* UserDataManager.swift in Sources */,
 				0B08191A1B28401F00688B35 /* SignUpViewController.swift in Sources */,
-				0B0819151B283FF800688B35 /* LoginViewController.swift in Sources */,
 				0B08190E1B28208500688B35 /* OrdersViewController.swift in Sources */,
 				0B0819101B28213800688B35 /* OrderItemTableViewCell.swift in Sources */,
 				0B209CFC1B26DFE10002BA6F /* HomeViewController.swift in Sources */,
@@ -304,8 +331,9 @@
 				0BC09ADF1B25AA6F00DC7765 /* MenuView.swift in Sources */,
 				0BC09ABD1B2597BF00DC7765 /* AppDelegate.swift in Sources */,
 				0B08191C1B28403D00688B35 /* TokensViewController.swift in Sources */,
+				0B08191F1B2970E700688B35 /* AuthManager.swift in Sources */,
+				0B0819211B29BFD000688B35 /* StringParser.swift in Sources */,
 				0BC09AE31B25C5C700DC7765 /* MenuTabBarController.swift in Sources */,
-				0B0819171B28400300688B35 /* LogoutViewController.swift in Sources */,
 				0B0819131B283FDA00688B35 /* LogInOutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +492,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "iOS-Token-Based-AuthenticationTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-Token-Based-Authentication.app/iOS-Token-Based-Authentication";
@@ -479,6 +508,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "iOS-Token-Based-AuthenticationTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-Token-Based-Authentication.app/iOS-Token-Based-Authentication";

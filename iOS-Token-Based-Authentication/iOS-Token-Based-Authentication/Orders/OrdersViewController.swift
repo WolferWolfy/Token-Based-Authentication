@@ -8,40 +8,52 @@
 
 import UIKit
 
-class OrdersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+class OrdersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AuthOrdersDelegate {
+    
+    let userManager = UserDataManager.sharedInstance
+    let authManager = AuthManager()
+    
+    var orders = [Order]()
+    
+    @IBOutlet weak var ordersTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        authManager.authOrdersDelegate = self
+        authManager.orders()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(animated: Bool) {
+        startSetup()
+    }
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        startSetup()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func startSetup() {
+        if !userManager.isUserLoggedIn() {
+            self.tabBarController?.selectedIndex = 1
+        }
+        else {
+            ordersTableView.hidden = false
+        }
     }
-    */
-    
-    // MARK - TableView DataSource
+
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 4
+        return orders.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCellWithIdentifier("OrderItemTableViewCell") as! OrderItemTableViewCell
+        
+        cell.setupCell(orders[indexPath.row])
         return cell
     }
     
@@ -59,6 +71,14 @@ class OrdersViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
         return nil
+    }
+    
+    
+    func ordersFinished(response: String?) {
+        
+        orders = StringParser.stringToOrderArray(response!)
+        self.ordersTableView.reloadData()
+        //println(response)
     }
 
 

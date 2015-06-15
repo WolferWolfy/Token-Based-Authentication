@@ -10,15 +10,17 @@ import UIKit
 
 class OrderItemTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    @IBOutlet weak var orderIdLabel: UILabel!
+    @IBOutlet weak var customerLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var isShippedSwitch: UISwitch!
+    
 
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func setupCell(order: Order) {
+        orderIdLabel.text = "\(order.orderId)"
+        customerLabel.text = order.customerName
+        cityLabel.text = order.shipperCity
+        isShippedSwitch.on = order.isShipped
     }
 
 }

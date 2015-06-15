@@ -8,28 +8,65 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, AuthRegistrationDelegate {
 
+    @IBOutlet weak var userNameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var confirmPasswordField: UITextField!
+    
+    @IBOutlet weak var errorLabel: UILabel!
+    
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
+    let authManager = AuthManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func submitButtonPressed(sender: AnyObject) {
+        authManager.authRegistrationDelegate = self
+        loadingIndicator.startAnimating()
+        loadingIndicator.hidden = false
+        
+        if passwordField.text != confirmPasswordField.text {
+            setErrorLabelText("Passwords do not match")
+        }
+        authManager.registerUser(userNameField.text, password: passwordField.text)
     }
     
+    func registrationFinished(response: String?) {
+        loadingIndicator.stopAnimating()
+        loadingIndicator.hidden = true
+        if let resultString = response {
 
-    /*
-    // MARK: - Navigation
+            if  count(resultString) > 0 {
+                setErrorLabelText(resultString)
+                return
+            }
+        }
+            setErrorLabelText("User registered. You will be navigated to login.")
+            errorLabel.textColor = UIColor.greenColor()
+            var timer = NSTimer.scheduledTimerWithTimeInterval(2.5, target: self, selector: Selector("navigateToLogin"), userInfo: nil, repeats: false)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
-
+    
+    func setErrorLabelText(text: String) {
+        errorLabel.text = text
+        errorLabel.hidden = false;
+    }
+    
+    func navigateToLogin() {
+        clearFields()
+        self.tabBarController?.selectedIndex = 1
+    }
+    
+    func clearFields() {
+        userNameField.text = nil
+        passwordField.text = nil
+        confirmPasswordField.text = nil
+        errorLabel.text = nil
+        errorLabel.hidden = true
+    }
 }
