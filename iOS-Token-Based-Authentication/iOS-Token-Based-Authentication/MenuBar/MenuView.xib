@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="iOS_Token_Based_Authentication" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="MenuView" customModule="iOS_Token_Based_Authentication" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="25"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMP-Y9-RRV">
+                    <rect key="frame" x="259" y="0.0" width="61" height="23"/>
+                    <color key="backgroundColor" red="0.25388168494007701" green="0.29352995270422977" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <inset key="contentEdgeInsets" minX="5" minY="3" maxX="5" maxY="3"/>
+                    <state key="normal" title="Sign Up">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxt-KT-lTl">
+                    <rect key="frame" x="204" y="0.0" width="55" height="23"/>
+                    <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <inset key="contentEdgeInsets" minX="5" minY="3" maxX="5" maxY="3"/>
+                    <state key="normal" title="Logout">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEG-Uf-run">
+                    <rect key="frame" x="149" y="0.0" width="55" height="23"/>
+                    <color key="backgroundColor" red="0.55487819630404434" green="0.35763223599587912" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <inset key="contentEdgeInsets" minX="5" minY="3" maxX="5" maxY="3"/>
+                    <state key="normal" title="Tokens">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cb8-31-RUs">
+                    <rect key="frame" x="73" y="0.0" width="76" height="23"/>
+                    <color key="backgroundColor" red="0.48580955022612193" green="0.58703410849502768" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <inset key="contentEdgeInsets" minX="5" minY="3" maxX="5" maxY="3"/>
+                    <state key="normal" title="My Orders">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktj-un-KXj">
+                    <rect key="frame" x="0.0" y="0.0" width="48" height="23"/>
+                    <color key="backgroundColor" red="0.22352941179999999" green="0.76078431369999999" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <inset key="contentEdgeInsets" minX="5" minY="3" maxX="5" maxY="3"/>
+                    <state key="normal" title="Home">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.55294117649999996" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="JMP-Y9-RRV" firstAttribute="centerY" secondItem="pxt-KT-lTl" secondAttribute="centerY" id="1wZ-yq-WWx"/>
+                <constraint firstItem="pxt-KT-lTl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Aht-iO-jVl"/>
+                <constraint firstItem="pxt-KT-lTl" firstAttribute="leading" secondItem="FEG-Uf-run" secondAttribute="trailing" id="DpV-pk-bSY"/>
+                <constraint firstItem="JMP-Y9-RRV" firstAttribute="leading" secondItem="pxt-KT-lTl" secondAttribute="trailing" id="ITG-p1-rVQ"/>
+                <constraint firstItem="ktj-un-KXj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NXU-hI-9eK"/>
+                <constraint firstItem="ktj-un-KXj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="P7r-67-Rhu"/>
+                <constraint firstAttribute="trailing" secondItem="pxt-KT-lTl" secondAttribute="trailing" id="QQM-7U-zM4"/>
+                <constraint firstItem="FEG-Uf-run" firstAttribute="centerY" secondItem="pxt-KT-lTl" secondAttribute="centerY" id="VL2-wc-asf"/>
+                <constraint firstItem="FEG-Uf-run" firstAttribute="leading" secondItem="cb8-31-RUs" secondAttribute="trailing" id="dL2-Tg-brq"/>
+                <constraint firstAttribute="trailing" secondItem="JMP-Y9-RRV" secondAttribute="trailing" id="hGJ-s6-07G"/>
+                <constraint firstItem="cb8-31-RUs" firstAttribute="centerY" secondItem="FEG-Uf-run" secondAttribute="centerY" id="jwc-sQ-6Ee"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="QQM-7U-zM4"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="LogInOutButton" destination="pxt-KT-lTl" id="nU1-4z-64N"/>
+                <outlet property="homeButton" destination="ktj-un-KXj" id="XmF-d2-CAu"/>
+                <outlet property="ordersButton" destination="cb8-31-RUs" id="zHA-H5-Xmr"/>
+                <outlet property="refreshTokenButton" destination="FEG-Uf-run" id="38h-Lh-gmo"/>
+                <outlet property="signUpButton" destination="JMP-Y9-RRV" id="SSF-BZ-cD4"/>
+            </connections>
+            <point key="canvasLocation" x="480" y="315"/>
+        </view>
+    </objects>
+</document>
